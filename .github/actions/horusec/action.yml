@@ -16,7 +16,7 @@ runs:
         horusec start -p . \
           --disable-docker=true \
           --output-format json \
-          --config-file=TpFinal/horusec-config.json \
+          --config-file-path=TpFinal/horusec-config.json \
           --json-output-file TpFinal/horusec-report.json \
           --show-vulnerabilities-types="Vulnerability" \
           --return-error=false
