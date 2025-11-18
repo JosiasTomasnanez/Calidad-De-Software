@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-v1
+  labels:
+    app: myapp
+    version: v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: myapp
+        version: v1
+    spec:
+      containers:
+        - name: myapp
+          image: nginx:alpine
+          command: ["/bin/sh"]
+          args: ["-c", "echo 'V1' > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"]
+          ports:
+            - containerPort: 80
