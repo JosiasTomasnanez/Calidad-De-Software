@@ -20,8 +20,8 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=prueba-horusec-y-canary
-            -Dsonar.organization=josiastomasnanez
+            -Dsonar.projectKey=Calidad-De-Software
+            -Dsonar.organization=Josias Tomas Ñañez
             -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
