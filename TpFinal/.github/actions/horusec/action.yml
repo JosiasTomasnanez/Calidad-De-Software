@@ -1,0 +1,41 @@
+name: "Horusec Security Scan"
+description: "Runs Horusec analysis with config file"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Horusec CLI
+      run: |
+        curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/master/deployments/scripts/install.sh | bash -s latest
+      shell: bash
+
+    - name: Run Horusec Analysis
+      run: |
+        echo "Running Horusec scan..."
+
+        # EJECUTAR Y GUARDAR JSON MANUALMENTE DESDE STDOUT
+        horusec start -p . \
+          --disable-docker=true \
+          --output-format json \
+          --config-file-path=horusec-config.json \
+          --json-output-file horusec-report.json \
+          --show-vulnerabilities-types="Vulnerability" \
+          --return-error=false
+
+        echo ""
+        echo "----------------------------"
+        echo "FULL REPORT (cat horusec-report.json)"
+        echo "----------------------------"
+        cat horusec-report.json || echo "No report found"
+        echo ""
+
+        echo "----------------------------"
+        echo "Parsed vulnerabilities:"
+        echo "----------------------------"
+        jq -r '
+          .analysisVulnerabilities[]?
+          | (.vulnerability // .vulnerabilities)
+          | "\(.severity) - \(.file):\(.line) - \(.details)"
+        ' horusec-report.json || echo "No vulnerabilities parsed."
+      shell: bash
+

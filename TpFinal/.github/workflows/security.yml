@@ -1,0 +1,27 @@
+name: SecurityPipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  security_pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Horusec Scan
+        uses: ./.github/actions/horusec
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        with:
+          projectBaseDir: .
+          args: >
+            -Dsonar.projectKey=prueba-horusec-y-canary
+            -Dsonar.organization=josiastomasnanez
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+

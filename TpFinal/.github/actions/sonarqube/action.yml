@@ -1,0 +1,27 @@
+name: "SonarQube Scan"
+description: "Runs SonarQube scanner"
+
+inputs:
+  projectKey:
+    description: "SonarQube project key"
+    required: true
+  host:
+    description: "SonarQube server URL"
+    required: true
+  token:
+    description: "SonarQube token"
+    required: true
+  organization:
+    description: "SonarCloud organization key"
+    required: true
+
+runs:
+  using: "docker"
+  image: "docker://sonarsource/sonar-scanner-cli:latest"
+  args:
+    - "-Dsonar.projectKey=${{ inputs.projectKey }}"
+    - "-Dsonar.organization=${{ inputs.organization }}"
+    - "-Dsonar.sources=."
+    - "-Dsonar.host.url=${{ inputs.host }}"
+    - "-Dsonar.login=${{ inputs.token }}"
+

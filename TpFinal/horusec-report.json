@@ -1,0 +1,262 @@
+{
+  "version": "v2.8.0",
+  "id": "6680855d-598e-4ee1-bc60-168686f2edab",
+  "repositoryID": "00000000-0000-0000-0000-000000000000",
+  "repositoryName": "",
+  "workspaceID": "00000000-0000-0000-0000-000000000000",
+  "workspaceName": "",
+  "status": "success",
+  "errors": "",
+  "createdAt": "2025-09-10T19:24:44.980234436-03:00",
+  "finishedAt": "2025-09-10T19:24:45.850825571-03:00",
+  "analysisVulnerabilities": [
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.850851192-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "b7f40ac0-8bc0-43b1-93f0-677158e6df6a",
+        "line": "0",
+        "column": "0",
+        "confidence": "MEDIUM",
+        "file": ".env",
+        "code": "",
+        "details": "(1/1) * Possible vulnerability detected: Password found in a hardcoded URL\nA password was found in a hardcoded URL, this can lead to not only the leak of this password but also a failure point to some more sophisticated CSRF and SSRF attacks. Check CWE-352 (https://cwe.mitre.org/data/definitions/352.html) and CWE-918 (https://cwe.mitre.org/data/definitions/918.html) for more details.",
+        "securityTool": "HorusecEngine",
+        "language": "Leaks",
+        "severity": "CRITICAL",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-LEAKS-27",
+        "vulnHash": "a208c596883b205e864bbecfffd29b40d8076b66290c64322939ea03220a3f85",
+        "deprecatedHashes": [
+          "2370361278e5669283059c1d87b9b5d78be091082448e09a7d1151477bf9d12f",
+          "cf963a6709d70521edea9048b3a16c3ab2b73dd411b362d31e3c43a1e3a9e041"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.850833809-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "e6b0b8f7-55d2-4748-885a-05812c90dc8d",
+        "line": "4",
+        "column": "21",
+        "confidence": "MEDIUM",
+        "file": "public/js/infoProduct.js",
+        "code": "btnInterac[i].addEventListener('click', function() {",
+        "details": "(1/1) * Possible vulnerability detected: Origins should be verified during cross-origin communications\nBrowsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).\nWhen receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "HIGH",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-11",
+        "vulnHash": "548bd146c2ffbae409f23e35228821ad94415ee42a853e8412845c92daf9581d",
+        "deprecatedHashes": [
+          "d8fb013a7aa39f5295362947d37cd820ce84cf517d7f3bb8f61f32de047607fb",
+          "1c71e006fe473d02cfa6c161a91e1ee5abdc68674a6a52e987f9fbf589e5e7ba"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.850835557-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "f84b25b3-d61a-4378-92b4-4753f81dd2ba",
+        "line": "1",
+        "column": "8",
+        "confidence": "MEDIUM",
+        "file": "public/js/home.js",
+        "code": "document.addEventListener('DOMContentLoaded', (event) =\u003e {",
+        "details": "(1/1) * Possible vulnerability detected: Origins should be verified during cross-origin communications\nBrowsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).\nWhen receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "HIGH",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-11",
+        "vulnHash": "ba476fc450ae8b8a50bbfc994ee70ab9bdc19573543ad36082c86edc1887a91f",
+        "deprecatedHashes": [
+          "48b136f1f4d827ff4aca38fe3931609b84c8a159f40d7ece804a115929f90787",
+          "f394d3d59558a10c55cdea397f399fc405b73184d8d719a4c0eb5f6e025ba7c6"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.850837093-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "1fef55b5-020d-485d-a3fd-d0a80a8e883d",
+        "line": "1",
+        "column": "8",
+        "confidence": "MEDIUM",
+        "file": "public/js/header.js",
+        "code": "document.addEventListener('DOMContentLoaded', (event) =\u003e {",
+        "details": "(1/1) * Possible vulnerability detected: Origins should be verified during cross-origin communications\nBrowsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).\nWhen receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "HIGH",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-11",
+        "vulnHash": "834939abcc609538abffb3d6fb00f98e7c1344acd355f7cbe7075cbdbc25dcb1",
+        "deprecatedHashes": [
+          "007182039c39efeaca38399a77b60f45ae3667f59321af0bb6e2fc3d33004f59",
+          "42791e4e3ba79f945aa485601af4fa9f972eccb4db8d9a81ef9752d62d157ae9"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.850838864-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "0c4cba78-533e-4369-bce7-dc2da6f59576",
+        "line": "1",
+        "column": "8",
+        "confidence": "MEDIUM",
+        "file": "public/js/form.js",
+        "code": "document.addEventListener('DOMContentLoaded', (event) =\u003e {",
+        "details": "(1/1) * Possible vulnerability detected: Origins should be verified during cross-origin communications\nBrowsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).\nWhen receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "HIGH",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-11",
+        "vulnHash": "8578bec0552399fb1787a69573696be9b47799c0abd7815eaa18a56b873d59a7",
+        "deprecatedHashes": [
+          "cb8dd9dfcd643c3be0d51427f9f21eba5ee604b2b271c834d2df413a7d1ae29f",
+          "f280bd4c920bdbe592596752708525754ffe32e6d84ba10cf3af07f9fbee964b"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.850840342-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "fb64419b-9660-4545-a79d-332c7fd9132a",
+        "line": "1",
+        "column": "8",
+        "confidence": "MEDIUM",
+        "file": "public/js/products.js",
+        "code": "document.addEventListener('DOMContentLoaded', async (event) =\u003e {",
+        "details": "(1/1) * Possible vulnerability detected: Origins should be verified during cross-origin communications\nBrowsers allow message exchanges between Window objects of different origins. Because any window can send / receive messages from other window it is important to verify the sender's / receiver's identity: When sending message with postMessage method, the identity's receiver should be defined (the wildcard keyword (*) should not be used).\nWhen receiving message with message event, the sender's identity should be verified using the origin and possibly source properties. For more information checkout the OWASP A2:2017 (https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication) and (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "HIGH",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-11",
+        "vulnHash": "f34d0d25e7a1d3ad95603a17b194891f1d8e00cf5942b49a3b3ddea9bf29107a",
+        "deprecatedHashes": [
+          "0504b0c5566933e404e69a07b4dbb3864bf11cde92d2c2c6a992f9ae566e5ccd",
+          "fc1fab9520aabcccca4542782f59582f71b2eeffc7599ce2c7e06fbadac5fe84"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.85084484-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "d2ff4aeb-0141-439a-beb9-8d8b5e133857",
+        "line": "16",
+        "column": "8",
+        "confidence": "HIGH",
+        "file": "src/app.js",
+        "code": "app.use(cors());",
+        "details": "(1/1) * Possible vulnerability detected: Having a permissive Cross-Origin Resource Sharing policy\nSame origin policy in browsers prevents, by default and for security-reasons, a javascript frontend to perform a cross-origin HTTP request to a resource that has a different origin (domain, protocol, or port) from its own. The requested target can append additional HTTP headers in response, called CORS, that act like directives for the browser and change the access control policy / relax the same origin policy. The Access-Control-Allow-Origin header should be set only for a trusted origin and for specific resources. For more information checkout the OWASP A6:2017 (https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "LOW",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-19",
+        "vulnHash": "a81889d1f6348d1f1858617d0c9440bd30346be052c5503ec559755620fa7af2",
+        "deprecatedHashes": [
+          "77ea77f2c0d992b23d7f52e9c28d483b0d064c7552216124a9ea5427d54fcaa7",
+          "531f1c0b04305d070da134d00ba8a1427dec09b1aa12a07a5af7e004f78e32c0"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    },
+    {
+      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
+      "analysisID": "6680855d-598e-4ee1-bc60-168686f2edab",
+      "createdAt": "2025-09-10T19:24:45.85084787-03:00",
+      "vulnerabilities": {
+        "vulnerabilityID": "a20e3df7-2343-43b4-baaa-cc5b79cf2236",
+        "line": "26",
+        "column": "14",
+        "confidence": "HIGH",
+        "file": "src/app.js",
+        "code": "cookie: { secure: false }",
+        "details": "(1/1) * Possible vulnerability detected: Creating cookies without the \"secure\" flag\nWhen a cookie is protected with the secure attribute set to true it will not be send by the browser over an unencrypted HTTP request and thus cannot be observed by an unauthorized person during a man-in-the-middle attack. It is recommended to use HTTPs everywhere so setting the secure flag to true should be the default behaviour when creating cookies. For more information checkout the OWASP A3:2017 (https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html) advisory.",
+        "securityTool": "HorusecEngine",
+        "language": "JavaScript",
+        "severity": "LOW",
+        "type": "Vulnerability",
+        "commitAuthor": "-",
+        "commitEmail": "-",
+        "commitHash": "-",
+        "commitMessage": "-",
+        "commitDate": "-",
+        "rule_id": "HS-JAVASCRIPT-47",
+        "vulnHash": "43990301a9477a758aa6f5e9203ee52c0900d51256cf87b5ce207ce9c4728b79",
+        "deprecatedHashes": [
+          "99dfcfe8da72a746ab58acd53406836a7b724906d8bc5fe04d58f2a02312af6e",
+          "ca9f51724bdc41f013119458894f977f9b0881957411e4f9358bbad5b850668a"
+        ],
+        "securityToolVersion": "",
+        "securityToolInfoUri": ""
+      }
+    }
+  ]
+}

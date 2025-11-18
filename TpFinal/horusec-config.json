@@ -1,0 +1,4 @@
+{
+    "return_error_if_found_vulnerability": true,
+    "severities_to_ignore": ["LOW", "MEDIUM", "INFO"]
+}
