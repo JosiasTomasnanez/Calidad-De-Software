@@ -4,6 +4,14 @@ description: "Runs Horusec analysis with config file"
 runs:
   using: "composite"
   steps:
+
+    - name: Remove conflicting horusec directory
+      run: |
+        if [ -d "/usr/local/bin/horusec" ]; then
+          sudo rm -rf /usr/local/bin/horusec
+        fi
+      shell: bash
+
     - name: Install Horusec CLI
       run: |
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/master/deployments/scripts/install.sh | bash -s latest
